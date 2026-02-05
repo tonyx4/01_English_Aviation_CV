@@ -81,11 +81,16 @@ p {
     font-weight: 400;
 }
 
-/* Perfil */
+/* Perfil profesional - resumen */
 .profile .summary {
-    color: var(--muted);
+    font-family: 'Inter', system-ui, Arial, sans-serif;
     font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    text-align: justify;
+    margin-top: 10px;
 }
+
 
 /* Bloques */
 .block {
@@ -206,11 +211,25 @@ p {
     transition: transform 0.5s ease;
 }
 
-.dots[data-level="5"]::after { transform: scaleX(1); }
-.dots[data-level="4"]::after { transform: scaleX(0.9); }
-.dots[data-level="3"]::after { transform: scaleX(0.8); }
-.dots[data-level="2"]::after { transform: scaleX(0.8); }
-.dots[data-level="1"]::after { transform: scaleX(0.8); }
+.dots[data-level="5"]::after {
+    transform: scaleX(1);
+}
+
+.dots[data-level="4"]::after {
+    transform: scaleX(0.9);
+}
+
+.dots[data-level="3"]::after {
+    transform: scaleX(0.8);
+}
+
+.dots[data-level="2"]::after {
+    transform: scaleX(0.8);
+}
+
+.dots[data-level="1"]::after {
+    transform: scaleX(0.8);
+}
 
 
 /* Botón PDF */
@@ -300,13 +319,19 @@ p {
     color: #122;
     text-decoration: none;
 }
+
 /* Forzar puntos delante de cada habilidad */
 .skill-list li::before {
-    content: "■"; /* Puedes usar "•" o cualquier símbolo */
-    color: #fff; /* Color del punto */
-    font-size: 12px; /* Tamaño del punto */
-    margin-right: 8px; /* Espacio entre el punto y el texto */
+    content: "■";
+    /* Puedes usar "•" o cualquier símbolo */
+    color: #fff;
+    /* Color del punto */
+    font-size: 12px;
+    /* Tamaño del punto */
+    margin-right: 8px;
+    /* Espacio entre el punto y el texto */
 }
+
 .skill-list li {
     display: flex;
     justify-content: space-between;
@@ -316,19 +341,144 @@ p {
 }
 
 .skill-list li::before {
-    content: "■"; /* o "•" si prefieres círculo */
+    content: "■";
+    /* o "•" si prefieres círculo */
     color: #fff;
     font-size: 10px;
     margin-right: 8px;
 }
+
 /* Todas las barras al 100% blancas */
 .dots::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;   /* Ocupa toda la barra */
+    width: 100%;
+    /* Ocupa toda la barra */
     height: 100%;
     background: #fff;
     border-radius: 3px;
+}
+
+/* =============================
+   AVISOS DESPLEGABLES <details><summary>
+   Aircraft Jobs & Work Certifications
+============================= */
+
+.resume details>summary {
+    background-color: var(--primary);
+    /* Usa tu color corporativo */
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 12px 0;
+}
+
+/* Quitar flecha por defecto */
+.resume details>summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Hover */
+.resume details>summary:hover {
+    background-color: var(--accent);
+}
+
+/* Cuando está abierto */
+.resume details[open]>summary {
+    background-color: var(--accent-2);
+}
+
+/* =============================
+   Unificar estilo de párrafos
+   (Summary = Professional Experience)
+============================= */
+
+.profile .summary {
+    font-family: 'Inter', system-ui, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #122;
+    /* mismo tono del resto del contenido */
+    font-weight: 400;
+}
+
+/* =============================
+   AJUSTES EXCLUSIVOS PARA PDF
+============================= */
+
+@media print {
+
+    /* Quitar grid y pasar a flujo vertical */
+    .resume {
+        display: block !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Columna izquierda y derecha en orden */
+    .left,
+    .right {
+        width: 100% !important;
+        display: block !important;
+        position: relative !important;
+        page-break-inside: avoid;
+    }
+
+    /* Evitar que los bloques se partan mal */
+    section,
+    article,
+    .block,
+    .job,
+    details {
+        page-break-inside: avoid;
+    }
+
+    /* Evitar texto montado */
+    p,
+    li {
+        line-height: 1.6 !important;
+    }
+
+    /* Quitar sombras y bordes innecesarios */
+    * {
+        box-shadow: none !important;
+    }
+
+    /* Ajuste de márgenes */
+    body {
+        margin: 10mm;
+    }
+}
+
+/* ===== FIX DEFINITIVO PARA PDF ===== */
+@media print {
+
+    .resume {
+        display: block !important;
+    }
+
+    aside.right {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 20px;
+        background: #ffffff !important;
+        color: #000 !important;
+        page-break-before: always;
+    }
+
+    section,
+    article,
+    ul,
+    li {
+        page-break-inside: avoid !important;
+    }
+
+    p,
+    li {
+        line-height: 1.7 !important;
+    }
 }

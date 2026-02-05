@@ -3,48 +3,48 @@ ESTILOS GENERALES
 ============================= */
 
 body {
-font-family: Arial, Helvetica, sans-serif;
-margin: 0;
-padding: 0;
-background-color: #f8f8f8;
-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
 header {
-background-color: #002b5c;
-color: white;
-padding: 15px 0;
-text-align: center;
+    background-color: #002b5c;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
 }
 
 header h1 {
-margin: 0;
-font-size: 1.8em;
+    margin: 0;
+    font-size: 1.8em;
 }
 
 nav ul {
-list-style: none;
-margin: 0;
-padding: 0;
-display: flex;
-justify-content: center;
-background-color: #004080;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #004080;
 }
 
 nav ul li {
-position: relative;
+    position: relative;
 }
 
 nav ul li a {
-display: block;
-padding: 14px 20px;
-color: white;
-text-decoration: none;
-font-weight: bold;
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
-background-color: #0059b3;
+    background-color: #0059b3;
 }
 
 /* =============================
@@ -52,35 +52,35 @@ MENÚ DESPLEGABLE (HOVER)
 ============================= */
 
 .dropdown-content {
-display: none;
-position: absolute;
-background-color: #004080;
-min-width: 250px;
-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-z-index: 1;
-top: 100%;
-left: 0;
-border-radius: 0 0 6px 6px;
+    display: none;
+    position: absolute;
+    background-color: #004080;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 0 0 6px 6px;
 }
 
 .dropdown-content li {
-width: 100%;
+    width: 100%;
 }
 
 .dropdown-content li a {
-padding: 12px 16px;
-color: white;
-text-decoration: none;
-display: block;
-font-weight: normal;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
 }
 
 .dropdown-content li a:hover {
-background-color: #0066cc;
+    background-color: #0066cc;
 }
 
 .dropdown:hover .dropdown-content {
-display: block;
+    display: block;
 }
 
 /* =============================
@@ -88,19 +88,19 @@ CONTENIDO PRINCIPAL
 ============================= */
 
 main {
-padding: 20px;
+    padding: 20px;
 }
 
 section {
-margin-bottom: 40px;
-background: white;
-padding: 20px;
-border-radius: 8px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-color: #002b5c;
+    color: #002b5c;
 }
 
 /* =============================
@@ -108,11 +108,11 @@ PIE DE PÁGINA
 ============================= */
 
 footer {
-background-color: #002b5c;
-color: white;
-text-align: center;
-padding: 10px 0;
-font-size: 0.9em;
+    background-color: #002b5c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
 }
 
 /* =============================
@@ -120,14 +120,14 @@ RESPONSIVE DESIGN
 ============================= */
 
 @media (max-width: 768px) {
-nav ul {
-flex-direction: column;
-}
+    nav ul {
+        flex-direction: column;
+    }
 
-.dropdown-content {
-position: static;
-box-shadow: none;
-}
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
 }
 
 
@@ -152,19 +152,26 @@ box-shadow: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;   /* Fondo blanco */
-    padding: 10px;              /* Espacio interno */
-    border-radius: 10px;        /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0,0,0,0.15); /* Sombra suave */
-    margin-bottom: 20px;        /* Separación inferior */
+    background-color: #ffffff;
+    /* Fondo blanco */
+    padding: 10px;
+    /* Espacio interno */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    /* Sombra suave */
+    margin-bottom: 20px;
+    /* Separación inferior */
 }
 
 .right .photo img {
     width: 120px;
     height: 140px;
     object-fit: cover;
-    border-radius: 8px;         /* Bordes suaves para la imagen */
-    border: 2px solid #ccc;     /* Borde gris claro */
+    border-radius: 8px;
+    /* Bordes suaves para la imagen */
+    border: 2px solid #ccc;
+    /* Borde gris claro */
 }
 
 /* Títulos dentro de la columna derecha */
@@ -393,60 +400,67 @@ box-shadow: none;
     border: 2px solid #ddd;
     border-radius: 8px;
 }
+
 /* ===== Menú Training & Certification (Hover oculto) ===== */
 .training-menu {
-  position: relative;
-  display: inline-block;
-  margin-top: 15px;
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
 }
 
 .menu-title {
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
 }
 
 /* Ocultar lista por defecto */
 .dropdown {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
-  padding: 10px;
-  list-style: none;
-  margin: 0;
-  border-radius: 5px;
-  z-index: 10;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 10;
 }
 
 /* Mostrar cuando el mouse está sobre el título o el contenedor */
 .training-menu:hover .dropdown {
-  display: block;
+    display: block;
 }
 
 /* Estilo de enlaces dentro del menú */
 .dropdown li {
-  margin: 5px 0;
+    margin: 5px 0;
 }
 
 .dropdown a {
-  text-decoration: none;
-  color: #0000ee;
+    text-decoration: none;
+    color: #0000ee;
 }
 
 .dropdown a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
+
 /* === Fondo blanco para la foto personal === */
 .right .photo {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;   /* Fondo blanco */
-    padding: 10px;              /* Espacio interno */
-    border-radius: 10px;        /* Bordes redondeados */
-    box-shadow: 0 0 8px rgba(0,0,0,0.1); /* Sombra suave */
-    margin-bottom: 20px;        /* Separación inferior */
+    background-color: #ffffff;
+    /* Fondo blanco */
+    padding: 10px;
+    /* Espacio interno */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    margin-bottom: 20px;
+    /* Separación inferior */
 }
 
 .right .photo img {
@@ -454,5 +468,42 @@ box-shadow: none;
     height: 140px;
     object-fit: cover;
     border-radius: 8px;
-    border: 2px solid #ddd;     /* Borde gris claro alrededor de la foto */
+    border: 2px solid #ddd;
+    /* Borde gris claro alrededor de la foto */
+}
+
+/* =============================
+   COLOR AVISOS <summary>
+   Aircraft Jobs y Work Certifications
+============================= */
+
+/* Estilo general del aviso */
+details>summary {
+    background-color: #002b5c;
+    /* Azul aeronáutico */
+    color: #ffffff;
+    /* Texto blanco */
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+/* Quitar flecha por defecto del navegador */
+details>summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Hover (cuando pasas el mouse) */
+details>summary:hover {
+    background-color: #0059b3;
+}
+
+/* Cuando el details está abierto */
+details[open]>summary {
+    background-color: #0b9aa0;
+    /* Verde azulado elegante */
+    color: #ffffff;
 }
